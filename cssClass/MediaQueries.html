@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+.row::after{
+    content: "";
+    clear:both;
+    display: block;
+}
+
+    .footer{
+        background-color:gold;
+        width:100%;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .buttom{
+        background-color: deeppink;
+        width:100%;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 15px;
+    }
+    [class*="col-"]{
+        float: left;
+    }
+
+    .col-1{
+        width: 25%;
+        background-color:goldenrod;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 15px;}
+
+    .col-2{width:25%;
+    background-color:blue;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;}
+    
+    .col-3{width:25%;
+    background-color:blue;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;}
+    
+    .col-4{
+    width:25%;
+    background-color:blue;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;}
+        
+    @media only screen and (max-width:600px){
+    [class*="col-"]{
+        width: 100%;
+        }
+    }
+
+    @media only screen and (max-width:936px){
+        .col-3{
+            width:50%;
+        }
+        .col-4{
+            width:50%;
+        }
+    }
+
+    @media only screen and (max-width:936px){
+    }
+
+    </style>
+</head>
+<body>
+    <div class= "footer">
+        Responsive Designe
+    </div>
+
+    <div class = "row">
+        <div class = "col-1">Tal1</div>
+        <div class = "col-2">Tal2</div>
+        <div class ="col-3">Tal-3</div>
+        <div class ="col-4">Tal-4</div>    
+    </div>
+    </div>
+    <div class="buttom">
+        Copyright to Tal Hakmon
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    
+    Welcome ! 
+    <div id="mainTal"></div>
+
+
+    <script>
+        function WebSite(url,rating){
+            this.url = url;
+            this.rating= rating;
+        }
+
+        function FreqWebSite(url,rating,times){
+            WebSite.call(this,url,rating);
+            this.times= times;
+        }
+
+        var urlText = document.createElement("input");
+        urlText.type="text";
+        urlText.value="URL";
+
+        var ratingText = document.createElement("input");
+        ratingText.type="text";
+        ratingText.value="rating";
+
+        var timesText = document.createElement("input");
+        timesText.type="text";
+        timesText.value="times";
+
+        var okButton = document.createElement("input");
+        okButton.type="button";
+        okButton.setAttribute("value","Ok");
+        okButton.setAttribute("type","button");
+
+
+        var myDiv = document.createElement("div");
+        myDiv.appendChild(urlText);
+        myDiv.appendChild(ratingText);
+        myDiv.appendChild(timesText);
+        myDiv.appendChild(okButton);
+
+        var mainCon = document.getElementById("mainTal");
+        mainCon.appendChild(myDiv);
+
+        var webSites =[];
+        var index = 0;
+
+        okButton.onclick= function(){
+            if(timesText.value==="times")
+            {
+                webSites.push(new WebSite(urlText.value,ratingText.value));
+            }
+            else{
+                webSites.push(new FreqWebSite(urlText.value,ratingText.value,timesText.value));
+            }
+            index++;
+            console.log(webSites);
+            localStorage.setItem("webSites",JSON.stringify(webSites));
+
+        };
+
+
+    </script>
+
+</body>
+</html>

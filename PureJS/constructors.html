@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+            function Recipe(name,calories){
+                this.name= name;
+                this.calories= calories;
+            }
+        
+            function HardRecipie(name,calories,hours){
+                Recipe.call(this,name,calories);
+                this.hours=hours;
+            }
+
+
+            var recipe1 = new Recipe("rice",300);
+            console.log(recipe1);
+
+
+            var hardRecipe1 = new HardRecipie("cake",1000,6);
+            console.log(hardRecipe1);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
